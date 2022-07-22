@@ -1,0 +1,23 @@
+#joke_structure {
+  
+  align-self: center;
+  font-size: 1.5rem;
+
+}
+#list_of_jokes{
+  
+  list-style-position: inside;
+  text-align: center;
+  margin-top:  100px;
+  margin-bottom: 50px;
+  
+  
+  
+  
+  
+
+}
+#list_of_jokes li * {
+  display: inline;
+  
+}
