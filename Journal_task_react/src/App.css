@@ -1,0 +1,73 @@
+#navigation_content {
+  background-color: rgb(230, 96, 96);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 40px;
+
+  
+}
+#nav_content {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  
+
+}
+#google_maps_link {
+  width: 30px;
+  text-decoration: none;
+  color: black;
+  
+}
+
+#nav_icons {
+  width: 50px;
+  
+}
+
+#travel_journal_wrapper{
+  background-color: white;
+}
+#travel_journal_content {
+  margin: 50px;
+
+  
+  
+}
+#Journal_text {
+  margin-left: 50px;
+  font-size: 1.5rem;
+  margin-right: 70px;
+  
+}
+
+
+#Journal_structure_box {
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+  margin-bottom: 30px;
+}
+
+#Journal_img {
+  width: 400px;
+  height: 500px;
+  border-radius: 40px;
+
+}
+#date_times {
+  display: flex;
+}
+#map_marker {
+  width: 20px;
+}
+#title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
