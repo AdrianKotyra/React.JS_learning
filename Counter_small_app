@@ -13,14 +13,15 @@ function App() {
 
     function Add_number() {
        
-        SetAddNumber(AddNumber+1)
+        SetAddNumber(prevCount => prevCount -1)
     
     }
    
     
     function Take_number() {
        
-        SetAddNumber(AddNumber-1)
+        SetAddNumber(prevCount => prevCount -1)
+        
     
     }
 
@@ -41,3 +42,49 @@ function App() {
     
     )
 }
+
+   
+
+
+   
+// const [isImportant, SetIsImportant] = React.useState("Yes")
+    
+//     const thingsArray = ["Thing 1", "Thing 2"]
+//     function Ele_array() {
+
+
+
+//         // const ele_from_array = thingsArray.map(function(ele){
+//         //     return(ele)
+//         // })
+//         return <p>{isImportant}</p>
+//     }
+
+
+//     function add_item() {
+//         SetIsImportant("No")
+//         if (SetIsImportant == "No") {
+//             SetIsImportant("Yes")
+//         }
+
+//         // const newThingText = `Thing ${thingsArray.length +1}`
+//         // thingsArray.push(newThingText)
+
+//     }
+
+//     return (
+//         <div>
+//             <button onClick={add_item}>Add Item</button>
+//             <p1><Ele_array/></p1>
+
+
+
+//         </div>
+//     )
+
+// }
+
+
+ReactDOM.render(<App/>, document.getElementById("meme_content"))
+
+// ReactDOM.render(<App/>, document.getElementById("meme_content"))
