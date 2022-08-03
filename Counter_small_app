@@ -1,0 +1,43 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+// import App from './App';
+
+
+
+
+function App() {
+    
+
+    
+    const [AddNumber, SetAddNumber] = React.useState(0)
+
+    function Add_number() {
+       
+        SetAddNumber(AddNumber+1)
+    
+    }
+   
+    
+    function Take_number() {
+       
+        SetAddNumber(AddNumber-1)
+    
+    }
+
+    
+
+
+    return(
+
+        <div id="counter_container">
+            <button className='minus' onClick={Take_number}>-</button>
+            <h1>{AddNumber}</h1>
+            <button className='plus' onClick={Add_number}>+</button>
+
+        </div>
+
+    
+    
+    
+    )
+}
