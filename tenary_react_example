@@ -1,0 +1,25 @@
+function YesorNO(){
+    const isGoingOut = true
+
+
+    return(
+        <div className='state'>
+            <h1 className='state--title'>Do I feel like going out tonight?</h1>
+            <div className='state--value'>
+                <h1>{isGoingOut? "yes": "no"}</h1>
+            </div>
+
+
+
+
+
+            
+        </div>
+
+
+    )
+}
+
+
+   
+ReactDOM.render(<YesorNO/>, document.getElementById("meme_content"))
