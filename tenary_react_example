@@ -1,17 +1,22 @@
-function YesorNO(){
-    const isGoingOut = true
+import React from 'react';
+import ReactDOM from 'react-dom';
+// import App from './App';
 
+
+function YesorNO(){
+    const [isGoingOut, SetisGoingOut] = React.useState(true)
+
+    function Changeit() {
+        SetisGoingOut(previousstate => !previousstate)
+        
+    }
 
     return(
         <div className='state'>
-            <h1 className='state--title'>Do I feel like going out tonight?</h1>
+            <h1 className='state--title' onClick ={Changeit}> Do I feel like going out tonight?</h1>
             <div className='state--value'>
                 <h1>{isGoingOut? "yes": "no"}</h1>
             </div>
-
-
-
-
 
             
         </div>
@@ -19,7 +24,6 @@ function YesorNO(){
 
     )
 }
-
 
    
 ReactDOM.render(<YesorNO/>, document.getElementById("meme_content"))
