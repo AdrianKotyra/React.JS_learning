@@ -1,0 +1,47 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+// import App from './App';
+
+
+function YesorNO(){
+    
+
+    const [ThingsArray, SetThingsArray] = React.useState(["Thing 1", "Thing 2"])
+
+    function Additem() {
+        SetThingsArray(prevThingsArray => {
+            return [...prevThingsArray, `Thing ${prevThingsArray.length +1}`]
+        })
+        
+
+
+    }
+
+
+
+    const thingsElements  = ThingsArray.map(function(item){
+        return <p>{item}</p>, <p>{item}</p>
+
+    })
+  
+    
+    return( 
+    <div id="here_content">
+        <button onClick={Additem} id="clickhere">click here</button>
+        <br></br>
+        {thingsElements}
+       
+
+       
+
+    </div>
+    
+
+    )
+  
+  
+}
+
+
+   
+ReactDOM.render(<YesorNO/>, document.getElementById("meme_content"))
