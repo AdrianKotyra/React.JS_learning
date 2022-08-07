@@ -1,0 +1,99 @@
+import React from "react";
+import Images_memes from "./meme_data"
+import default_image from "./imgs/default_image.jpg"
+
+
+
+
+
+
+function Input_forms () {
+
+    const[Meme, setMeme] = React.useState({
+        topText:"",
+        bottomText:"",
+        randomImage: default_image
+    })
+
+    const[AllMemeImages, SetallMemeImages] = React.useState(Images_memes)
+    
+   
+    const [MemeImage, SetMemeImage] = React.useState(default_image)
+   
+
+    function New_image() {
+
+       
+        
+
+        const meme_list = AllMemeImages
+        const random_ele_from_meme_list = Math.floor(Math.random() * meme_list.length)
+        const random_meme_from_array_url = meme_list[random_ele_from_meme_list].url
+        
+        SetMemeImage(random_meme_from_array_url)
+        setMeme(prevMeme =>({
+            ...prevMeme, 
+            randomImage: random_meme_from_array_url
+        }))
+
+
+
+    }
+
+
+
+
+    return (
+        <>
+
+            <form id="inputs">
+
+                <input className="input_form" type="text" placeholder="First word">
+
+                </input>
+
+                <input className="input_form" type="text" placeholder="Second word">
+                    
+
+                </input>
+
+
+
+            </form>
+
+
+            <button onClick={New_image} id="submit_button_generate_image" type="submit"> Get a new meme image</button>
+
+
+
+            <div id="meme_image_content" >
+            
+            <img id="meme_image" src={Meme.randomImage}></img>
+            <div id="meme_texts">
+                <div id="text1_from_input">
+                    <p1>text1</p1>
+
+                </div>
+
+
+                <div id="text2_from_input">
+                    <p1>text2</p1>
+
+                </div>
+
+
+            </div>
+
+           
+        
+           
+
+        </div>
+
+            
+        </>
+
+    )
+}
+
+export default Input_forms;
