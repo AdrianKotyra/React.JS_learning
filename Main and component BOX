@@ -1,0 +1,91 @@
+Main-------------------------------------------------------------------------
+
+
+import React from 'react';
+import './App.css';
+import Nav from "./components/nav"
+import Input_forms from "./components/input froms"
+import Meme_image from "./components/meme"
+import Box from './components/box';
+
+// function App() {
+//   return (
+//     <>
+//       <Nav/>
+//       <Input_forms/>
+      
+
+//     </>
+ 
+//   )
+
+    
+// }
+
+
+
+function App() {
+  const [darkMode, setdarkmode] = React.useState(true)
+
+  
+  
+
+
+   
+
+  function Change_darkmode() {
+    setdarkmode(prevdarkmode => 
+      !prevdarkmode
+    )
+    
+
+  }
+
+  
+   return (
+    <div>
+      <button className='button_mode' onClick={Change_darkmode}>Change dark mode</button>
+      <Box Isdark= {darkMode}/>
+    </div>
+   )
+
+
+  }
+  
+
+export default App;
+
+BOX(component)-------------------------------------------------------------------------
+
+import React from 'react';
+import Boxes_from_data from './boxes';
+
+
+
+function Box(props) {
+    const Isdark = props.Isdark
+    const styles = {backgroundColor: Isdark? "#222222": "#cccccc" }
+
+    
+    const [boxes, setboxes] = React.useState(Boxes_from_data)
+        
+    return(
+        boxes.map(box => (
+            <div style={styles} className="square">{box.id}</div>
+        ))
+    
+    
+
+   
+    )
+   
+}
+
+export default Box;
+
+
+
+
+
+
+
