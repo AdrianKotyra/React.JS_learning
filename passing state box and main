@@ -1,0 +1,64 @@
+main-----------------------
+
+function App() {
+  const [boxes, setboxes] = React.useState(Boxes_from_data)
+
+  const boxes_from_array = boxes.map(single_box => (
+    <Box on={single_box.on} />
+
+    
+  ))
+  
+  const [darkMode, setdarkmode] = React.useState(true)
+
+
+
+  function Change_darkmode() {
+    setdarkmode(prevdarkmode => 
+      !prevdarkmode
+    )
+    
+
+  }
+
+   return (
+    <div>
+      <button className='button_mode' onClick={Change_darkmode}>Change dark mode</button>
+      {boxes_from_array}
+    </div>
+   )
+
+
+  }
+  
+
+export default App;
+
+component(box)------------------------------------------------------------------
+
+import React from 'react';
+import Boxes_from_data from './boxes';
+
+
+
+export default function Box(props) {
+    
+
+    const styles = {backgroundColor: props.on ? "#222222" : "none" }
+    
+    
+    
+        
+    return(
+        
+        <div style={styles} className="square"></div>
+    )
+    
+    
+
+   
+    
+   
+}
+
+
