@@ -1,0 +1,33 @@
+
+import React from 'react';
+import Boxes_from_data from './boxes';
+
+
+
+export default function Box(props) {
+    const isOn = props.on
+    const [boxon, setBoxOn] = React.useState(isOn)
+
+    function Isonisoff() {
+        setBoxOn(prevsetBoxOn => 
+        !prevsetBoxOn )
+    }
+
+    const styles = {backgroundColor: boxon ? "#222222" : "#ffffff" }
+    
+    
+    
+        
+    return(
+        
+        <div style={styles} onClick = {Isonisoff} className="square"></div>
+    )
+    
+    
+
+   
+    
+   
+}
+
+
