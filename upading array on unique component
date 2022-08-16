@@ -81,3 +81,42 @@ function App() {
 
 
 export default App;
+
+
+
+
+
+
+
+
+box component--------------------------------------------
+
+
+import React from 'react';
+import Boxes_from_data from './boxes';
+
+
+
+export default function Box(props) {
+    
+    
+
+    const styles = {backgroundColor: props.on ? "#222222" : "#ffffff" }
+    
+    
+    
+        
+    return(
+        
+        <div style={styles} 
+        className="square" 
+        onClick={() => props.toggle(props.id)}></div>
+    )
+    
+    
+
+   
+    
+   
+}
+
