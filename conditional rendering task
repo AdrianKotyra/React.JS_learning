@@ -23,16 +23,16 @@ import Boxes_from_data from './components/boxes';
 
 
 function App() {
-  const [messages, setMessages] = React.useState(["a", "b"])
+  const [messages, setMessages] = React.useState(["a"])
   
   
 
   return (
     <div>
 
-      {!messages && <p>You are all caught up!</p>}
+      {messages.length ===0 && <p>You are all caught up!</p>}
       {messages.length>1 && <p>You have {messages.length} messages !</p>}
-      {messages===1 && <p>You have 1 message</p>}
+      {messages.length===1 && <p>You have 1 message</p>}
 
       
       
