@@ -1,0 +1,82 @@
+
+import React from 'react';
+import './App.css';
+import Nav from "./components/nav"
+import Input_forms from "./components/input froms"
+import Meme_image from "./components/meme"
+import Box from './components/box';
+import Boxes_from_data from './components/boxes';
+// function App() {
+//   return (
+//     <>
+//       <Nav/>
+//       <Input_forms/>
+      
+
+//     </>
+ 
+//   )
+
+    
+// }
+
+
+
+function App() {
+  const [formData, setformData] = React.useState(
+    {firstName: "", lastName: ""}
+  )
+  
+  
+
+
+
+    
+  
+
+  function handleChange(event) {
+    setformData(prevsetformData => {
+      return {
+        ...prevsetformData,
+        [event.target.name] : event.target.value 
+
+
+
+      }
+    })
+  }
+
+ 
+  
+ 
+
+  return ( 
+    <form>
+      <input
+        type="text"
+        placeholder="First Name"
+        onChange={handleChange}
+        name="firstName"
+      />  
+
+      <input
+        type="text"
+        placeholder="Last Name"
+        onChange={handleChange}
+        name="lastName"
+      />  
+
+      <button >check details</button>
+
+    </form>
+
+
+    
+  )
+
+
+
+
+}
+
+export default App;
