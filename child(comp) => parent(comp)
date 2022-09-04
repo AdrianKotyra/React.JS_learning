@@ -1,0 +1,18 @@
+
+
+Child-------------------------------------------------
+ props.onSaveExpenseData(expenseData);
+ 
+ 
+ 
+ Parent-------------------------------------------------
+ 
+    const saveExpenseDataHandler = (enteredExpenseData) => {
+        const expenseData = {
+            ...enteredExpenseData,
+            id: Math.random().toString()
+        }
+        props.onAddExpense(expenseData)
+
+    }
+  <Formfunction onSaveExpenseData={saveExpenseDataHandler}/>
