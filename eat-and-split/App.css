@@ -1,8 +1,8 @@
 :root {
-  --color-lightest: #fff4e6;
-  --color-light: #ffe8cc;
-  --color-medium: #ffa94d;
-  --color-dark: #ff922b;
+  --color-lightest: #e3f2f7;
+  --color-light: #c5ebee;
+  --color-medium: #88c3dc;
+  --color-dark: #2bcaff;
 }
 
 * {
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  height: 100vh;
+ 
   color: #495057;
   display: flex;
   align-items: center;
@@ -53,6 +53,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  
   font-size: 1.4rem;
   margin-bottom: 2rem;
 }
